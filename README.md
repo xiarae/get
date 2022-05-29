@@ -104,11 +104,3 @@ https://github.com/badafans/better-cloudflare-ip
 免费服务且用且珍惜，我一直没封BT等，建议尽量别滥用，之前就有用户用来发垃圾邮件，导致被vultr停机，目前大多节点我并没限速，仅部分流量费用较贵的节点我限速50M。如果不能满足建议使用heroku或者买云服务器自行搭建。
 
 
-#### 2024邀请码 
-
-你可以找老用户索取邀请码
-也可以访问 https://21t.co/admin 或https://t.me/herokuvless  获取
-
-
-### 详细文字教程（面向0基础新手）感谢@我的未来不是梦 编写。
-http://yun.21t.co/aliyun/电子资料/Heroku搭建教程.docx
