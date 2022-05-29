@@ -16,78 +16,7 @@ Heroku是一个支持多种编程语言的云平台即服务。目前支持Ruby�
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://dashboard.heroku.com/new?template=https%3A%2F%2Fgithub.com%2Frptec%2Fheroku-vless)
 
 
-#### 注：失效问题
-上方一键部署已失效，刚看到有朋友说heroku检测到代码违反服务协议，估计使用的人太多或被人举报仓库被heroku封了。
 
-#### 解决方法：
-a.这里建议你fork本代码后，在github里设置为私有，然后绑定你github到heroku部署使用，推荐这个。
-
-b.或者也可以fork代码后，修改下面链接rptec为你自己账户名，通过链接部署。
-
-https://dashboard.heroku.com/new?template=https://github.com/rptec/heroku-vless.git
-
-免费服务，且用且珍惜,节约地球资源。
-
-## 设置
-
-### 路径
-
-`WebSocket` 路径(配置文件中的 `path` )为 `/` 。你也可以自行修改
-
-### 端口
-
-`端口` 为 `443` 。
-
-### UUID
-
-`UUID` 默认为 `bf400a11-9848-4db2-b5e0-1b71c80cb436` 你也可以在部署时自由修改（建议修改）。
-
-## 流量中转
-
-使用cloudflare的workers来`中转流量`，配置为： 
-
-```
-addEventListener(
-      "fetch",event => {
-         let url=new URL(event.request.url);
-         url.hostname="HEROKU地址，例如 rptec.herokuapp.com";
-         let request=new Request(url,event.request);
-         event. respondWith(
-           fetch(request)
-         )
-      }
-    ) 
-```
-
-
-VLESS演示链接
-自行修改其中 自选IP和你的heroku地址。不再提供演示，发现我提供了，就全用我的演示地址了，一天就能几百万连接，给账号都干趴下，自建很简单。
-```
-vless://10974d1a-cbd6-4b6f-db1d-38d78b3fb109@你的自选ip:443?encryption=none&flow=xtls-rprx-direct&security=tls&sni=你的HEROKU地址或CF反代地址&type=ws&host=你的HEROKU地址或CF反代地址#heroku
-
-```
-详细教程
-https://92km.net/archives/VLESS-Heroku-cloudflareworkers.html
-
-搭建中有任何问题，也可以联系我 https://t.me/herokuvless
-
-## 云服务器自行搭建
-
-手动搭建可参考我代码中 configure.sh内容，修改uuid等信息就可以手动部署。
-
-建议新手使用x-ui一键安装，附带web面板。使用起来简单。
-
-https://github.com/vaxilu/x-ui
-
-## 测速
-heroku服务器选美国区的话一般在亚马逊弗吉尼亚阿什本节点，套cf后，速度取决于你自选ip的速度。
-
-自选IP后youtube非高峰期一般能跑30000-50000kbps。可以流畅播放4K视频。
-![speedtest](https://img.21t.co/2022/04/19/8a697d.png)
-原版、套CF、自选IP速度对比，自选IP明显要高出一大截。我这边在国内用手机测速speedtest一般可以跑150M以上。
-
-## 自选IP教程
-最近经常有人问如何自选ip，以前博客发过，后来因为觉得没什么作用，太简单就删了。现在重新贴出来吧，你下载下面工具自己执行即可。如果不想自己选的话，也可以使用我提供的ip.2024.ml
 
 https://github.com/badafans/better-cloudflare-ip
 
