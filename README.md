@@ -40,7 +40,7 @@ https://dashboard.heroku.com/new?template=https://github.com/rptec/heroku-vless.
 
 ### UUID
 
-`UUID` 默认为 `10974d1a-cbd6-4b6f-db1d-38d78b3fb109` 你也可以在部署时自由修改（建议修改）。
+`UUID` 默认为 `bf400a11-9848-4db2-b5e0-1b71c80cb436` 你也可以在部署时自由修改（建议修改）。
 
 ## 流量中转
 
