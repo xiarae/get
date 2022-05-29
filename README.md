@@ -26,7 +26,7 @@ b.或者也可以fork代码后，修改下面链接rptec为你自己账户名，
 
 https://dashboard.heroku.com/new?template=https://github.com/rptec/heroku-vless.git
 
-免费服务，且用且珍惜。
+免费服务，且用且珍惜,节约地球资源。
 
 ## 设置
 
